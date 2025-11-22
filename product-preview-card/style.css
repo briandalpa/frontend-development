@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --font-default: Montserrat;
+  --font-alt: Fraunces;
+  --font-extra-small: 12px;
+  --font-small: 13px;
+  --font-medium: 14px;
+  --font-large: 32px;
+  --font-regular: 500;
+  --font-bold: 700;
+  --white: #ffffff;
+  --cream: #f2eae2;
+  --aurometal-saurus: #6c7289;
+  --gunmetal: #1c232b;
+  --aquamarine: #3d8168;
+  --deep-aquamarine: #1a4032;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-default);
+  font-size: var(--font-small);
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  width: 600px;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 50%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tag {
+  font-size: var(--font-extra-small);
+  color: var(--aurometal-saurus);
+  letter-spacing: 5px;
+}
+
+.title {
+  font-family: var(--font-alt);
+  font-size: var(--font-large);
+}
+
+.description {
+  font-size: var(--font-medium);
+  color: var(--aurometal-saurus);
+  line-height: 1.5;
+}
+
+.price-box {
+  display: flex;
+  margin: 10px 0;
+  gap: 15px;
+  align-items: center;
+}
+
+.price {
+  font-family: var(--font-alt);
+  font-size: var(--font-large);
+  font-weight: var(--font-bold);
+  color: var(--aquamarine);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--aurometal-saurus);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 70px;
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--aquamarine);
+  color: var(--white);
+
+  font-size: var(--font-medium);
+  font-weight: var(--font-regular);
+
+  cursor: pointer;
+  align-self: center;
+
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background-color: var(--deep-aquamarine);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  .card-image,
+  .card-content {
+    width: 100%;
+  }
+
+  .card-image img {
+    height: 260px;
+  }
+
+  .card-content {
+    padding: 28px;
+    gap: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 18px 0;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 343px;
+  }
+}
