@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --yellow: #f4d043;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --white: #ffffff;
+  --font-family: "Figtree", sans-serif;
+  --font-small: 14px;
+  --font-normal: 16px;
+  --font-medium: 24px;
+  --space-small: 4px;
+  --space-normal: 8px;
+  --space-medium: 12px;
+  --space-large: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-950);
+  border-radius: var(--space-large);
+  padding: var(--space-large);
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-large);
+  box-shadow: 8px 8px 0 var(--gray-950);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.badge {
+  background: var(--yellow);
+  padding: var(--space-small) var(--space-normal);
+  display: inline-block;
+  width: fit-content;
+  border-radius: var(--space-small);
+  font-size: var(--font-small);
+  font-weight: 800;
+}
+
+.date {
+  font-size: var(--font-small);
+  font-weight: 500;
+  margin-top: -8px;
+}
+
+.title {
+  font-size: var(--font-medium);
+  font-weight: 800;
+  color: var(--yellow);
+  cursor: pointer;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.description {
+  font-size: var(--font-normal);
+  font-weight: 500;
+  color: var(--gray-500);
+  line-height: 150%;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: var(--font-small);
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 340px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 320px;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
